@@ -1,5 +1,9 @@
-import Image from 'next/image';
+import BlogCard from '@/components/Home/BlogCard';
 
 export default function Home() {
-  return <div>Home</div>;
+  return (
+    <div>
+      <BlogCard />
+    </div>
+  );
 }
