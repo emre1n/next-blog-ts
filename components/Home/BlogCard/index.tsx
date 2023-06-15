@@ -1,8 +1,13 @@
 import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
+import { Post } from '@prisma/client';
 
-const BlogCard = () => {
+interface BlogCardProps {
+  post: Post;
+}
+
+const BlogCard = ({ post }: BlogCardProps) => {
   return (
     <Link
       href="/"
@@ -17,8 +22,8 @@ const BlogCard = () => {
         />
       </div>
       <div>
-        <h3 className="font-bold">Title</h3>
-        <p>Lorem Ipsum</p>
+        <h3 className="font-bold">{post.title}</h3>
+        <p>{post.content}</p>
       </div>
     </Link>
   );
