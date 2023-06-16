@@ -35,7 +35,7 @@ const Header = () => {
         <ul
           className={`${
             isMenuOpen ? 'absolute' : 'hidden'
-          } top-16 right-1 p-4 bg-base-100 rounded w-52 flex flex-col items-end gap-4`}
+          } top-16 right-1 z-10 p-4 bg-base-100 rounded w-52 flex flex-col items-end gap-4`}
         >
           <li>
             <a>Login</a>

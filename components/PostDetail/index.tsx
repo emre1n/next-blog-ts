@@ -1,12 +1,16 @@
 import { Post } from '@prisma/client';
 import React from 'react';
 import Image from 'next/image';
+import { notFound } from 'next/navigation';
 
 interface Props {
   post: Post | undefined;
 }
 
 const PostDetail = ({ post }: Props) => {
+  if (!post?.id) {
+    notFound();
+  }
   return (
     <div className="flex flex-col items-center gap-6 p-4">
       <div className="relative w-full h-72">

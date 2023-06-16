@@ -1,15 +1,15 @@
 import BlogCard from '@/components/Home/BlogCard';
 import getPosts from './actions/getPosts';
 import { Post } from '@prisma/client';
+import BlogCardList from '@/components/Home/BlogCardList';
 
 export default async function Home() {
   const posts = await getPosts();
 
   return (
-    <div className="flex flex-col gap-2">
-      {posts.map((post: Post) => {
-        return <BlogCard key={post.id} post={post} />;
-      })}
-    </div>
+    <>
+      <h2 className="py-4">The Latest</h2>
+      <BlogCardList posts={posts} />
+    </>
   );
 }

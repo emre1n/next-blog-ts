@@ -11,7 +11,6 @@ export default async function PostDetailPage({ params }: Props) {
   const post: Post | undefined = posts.find(
     post => post.id === Number(params.id)
   );
-
   return (
     <div>
       <PostDetail post={post} />

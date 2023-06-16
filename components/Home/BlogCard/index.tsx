@@ -11,8 +11,12 @@ const BlogCard = ({ post }: BlogCardProps) => {
   return (
     <Link
       href={`${post.id}`}
-      className="flex gap-4 items-center p-4 border border-base-100 rounded-lg"
+      className="flex gap-4 p-4 border-t border-t-negative-text"
     >
+      <div className="w-2/3">
+        <h3 className="font-bold text-2xl text-secondary">{post.title}</h3>
+        <p className="text-sm">{post.content}</p>
+      </div>
       <div className="relative w-24 h-24">
         <Image
           className="rounded-lg"
@@ -20,10 +24,6 @@ const BlogCard = ({ post }: BlogCardProps) => {
           alt="Blog card image"
           fill
         />
-      </div>
-      <div className="w-2/3">
-        <h3 className="font-bold text-secondary">{post.title}</h3>
-        <p>{post.content}</p>
       </div>
     </Link>
   );
