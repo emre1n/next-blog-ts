@@ -23,7 +23,7 @@ const PostDetail = ({ post }: Props) => {
       </div>
       <hr className="border w-full border-negative-text" />
       <div className="flex flex-col w-full">
-        <h3 className="font-bold text-3xl text-secondary">{post?.title}</h3>
+        <h3 className="text-3xl text-secondary">{post?.title}</h3>
         <p>{post?.content}</p>
       </div>
     </div>
