@@ -4,7 +4,6 @@ import { Post } from '@prisma/client';
 
 export default async function Home() {
   const posts = await getPosts();
-  console.log('prisma-data', posts);
 
   return (
     <div className="flex flex-col gap-2">

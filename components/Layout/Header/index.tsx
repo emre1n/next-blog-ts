@@ -38,7 +38,7 @@ const Header = () => {
           } top-16 right-1 p-4 bg-base-100 rounded w-52 flex flex-col items-end gap-4`}
         >
           <li>
-            <a>Homepage</a>
+            <a>Login</a>
           </li>
           <li>
             <a>Portfolio</a>
