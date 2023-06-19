@@ -18,8 +18,7 @@ const Header = () => {
           BLOG
         </Link>
       </div>
-      <nav className="flex gap-4">
-        <SigninButton />
+      <nav>
         {isMenuOpen ? (
           <BsX
             onClick={toggleMenu}
@@ -40,10 +39,10 @@ const Header = () => {
           } top-16 right-1 z-10 p-4 bg-base-100 rounded w-52 flex flex-col items-end gap-4`}
         >
           <li>
-            <a>Login</a>
+            <SigninButton />
           </li>
           <li>
-            <a>Portfolio</a>
+            <Link href="/userpost">User Post</Link>
           </li>
           <li>
             <a>About</a>
