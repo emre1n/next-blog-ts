@@ -2,6 +2,7 @@ import './globals.css';
 import { Roboto } from 'next/font/google';
 import Header from '@/components/Layout/Header';
 import Footer from '@/components/Layout/Footer';
+import Providers from './providers/Providers';
 const roboto = Roboto({ subsets: ['latin'], weight: ['400', '700'] });
 
 export const metadata = {
@@ -19,9 +20,11 @@ export default function RootLayout({
       <body
         className={`${roboto.className} flex flex-col justify-between h-screen w-full`}
       >
-        <Header />
-        <main className="h-full max-w-[1800px] p-2">{children}</main>
-        <Footer />
+        <Providers>
+          <Header />
+          <main className="h-full max-w-[1800px] p-2">{children}</main>
+          <Footer />
+        </Providers>
       </body>
     </html>
   );

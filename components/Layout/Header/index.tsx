@@ -2,6 +2,7 @@
 import React, { useState, useCallback } from 'react';
 import Link from 'next/link';
 import { BsList, BsX } from 'react-icons/bs';
+import SigninButton from '../SigninButton';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -17,7 +18,8 @@ const Header = () => {
           BLOG
         </Link>
       </div>
-      <nav>
+      <nav className="flex gap-4">
+        <SigninButton />
         {isMenuOpen ? (
           <BsX
             onClick={toggleMenu}
