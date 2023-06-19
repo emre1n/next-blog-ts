@@ -18,11 +18,11 @@ export default function RootLayout({
   return (
     <html lang="en" className="flex justify-center items-center">
       <body
-        className={`${roboto.className} flex flex-col justify-between h-screen w-full`}
+        className={`${roboto.className} flex flex-col justify-between items-center h-screen w-full`}
       >
         <Providers>
           <Header />
-          <main className="h-full max-w-[1800px] p-2">{children}</main>
+          <main className="h-full max-w-[768px] p-2">{children}</main>
           <Footer />
         </Providers>
       </body>
