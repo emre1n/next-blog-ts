@@ -4,6 +4,7 @@ import { signIn, signOut, useSession } from 'next-auth/react';
 
 const SigninButton = () => {
   const { data: session } = useSession();
+  console.log(session?.user);
   if (session && session.user) {
     return (
       <div className="flex gap-4">
