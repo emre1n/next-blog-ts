@@ -17,12 +17,13 @@ const BlogCard = ({ post }: BlogCardProps) => {
         <h3 className="text-2xl text-secondary">{post.title}</h3>
         <p className="text-sm">{post.content}</p>
       </div>
-      <div className="relative w-24 h-24">
+      <div className="h-24 w-24 relative overflow-hidden rounded-lg">
         <Image
-          className="rounded-lg"
           src={`https://picsum.photos/200/300?random=${post.id}`}
           alt="Blog card image"
-          fill
+          width={200}
+          height={300}
+          sizes="(max-width: 600px) 100vw, (max-width: 1200px) 50vw, 800px"
         />
       </div>
     </Link>

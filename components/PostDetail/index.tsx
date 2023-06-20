@@ -13,12 +13,15 @@ const PostDetail = ({ post }: Props) => {
   }
   return (
     <div className="flex flex-col items-center gap-6 p-4">
-      <div className="relative w-full h-72">
+      <div className="relative flex justify-center">
         <Image
-          className="rounded-lg object-cover"
+          className="rounded-lg"
           src={`https://picsum.photos/200/300?random=${post?.id}`}
-          alt="Blog card image"
-          fill
+          alt="Blog detail image"
+          width={200}
+          height={300}
+          sizes="(max-width: 600px) 100vw, (max-width: 1200px) 50vw, 800px"
+          priority
         />
       </div>
       <hr className="border w-full border-negative-text" />
