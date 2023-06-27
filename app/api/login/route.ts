@@ -24,5 +24,17 @@ export async function POST(request: Request) {
       accessToken,
     };
     return new Response(JSON.stringify(result));
-  } else console.log('response failed!!!!');
+  } else {
+    const errorResponse = new Response('Bir hata oluştu.', {
+      status: 500,
+      // İsteğe bağlı olarak istediğiniz HTTP durum kodunu belirleyebilirsiniz  statusText: 'Internal Server Error',
+      // İsteğe bağlı olarak hata durumunu açıklayan bir metin belirleyebilirsiniz
+      headers: {
+        'Content-Type': 'text/plain',
+        // İsteğe bağlı olarak içeriğin türünü belirleyebilirsiniz
+      },
+    });
+    // Response nesnesini döndürmereturn errorResponse;
+    return errorResponse;
+  }
 }
