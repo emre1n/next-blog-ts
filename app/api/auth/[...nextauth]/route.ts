@@ -19,6 +19,7 @@ const authOptions: AuthOptions = {
         // Add logic here to look up the user from the credentials supplied
         const res = await fetch(`${process.env.NEXTAUTH_URL}/api/login`, {
           method: 'POST',
+          credentials: 'same-origin',
           headers: {
             'Content-Type': 'application/json',
           },
